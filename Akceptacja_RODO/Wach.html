@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Okna Dialogowe</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 50px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #container{
+            background-image: linear-gradient(to right bottom, rgb(195, 82, 174), orange);
+            height: 100vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="main"></div>
+    </div>    
+<script>
+    let query = confirm("Czy akceptujesz warunki RODO?");
+    if(query == true){
+        let name = prompt("Podaj imię");
+        if(name == ""){
+            document.querySelector("#main").innerHTML = "Ta informacja jest wymagana";   
+        }else if(name == null){
+            document.querySelector("#main").innerHTML = "Ta informacja jest wymagana";
+        }else{
+            document.querySelector("#main").innerHTML = "Witaj " + name + "!";
+        }
+    }else{
+        document.querySelector("#main").innerHTML = "Akceptacja jest wymagana do korzystania!";
+    }
+</script>
+</body>
+</html>
