@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zgadywanka</title>
+</head>
+<body>
+    <script>
+
+            const wylosowanaLiczba = Math.floor(Math.random() * 10) + 1;
+
+
+            let proba;
+            let liczbaProb = 0;
+
+
+            do {
+            proba = parseInt(prompt("Zgadnij liczbę od 1 do 10:"));
+            liczbaProb++;
+
+            if (proba > wylosowanaLiczba) {
+                alert("Za dużo!");
+            } else if (proba < wylosowanaLiczba) {
+                alert("Za mało!");
+            } else if (isNaN(proba)) {
+                alert("Podaj liczbę!");
+            }
+            } while (proba !== wylosowanaLiczba);
+
+            alert(`Gratulacje! Zgadłeś liczbę ${wylosowanaLiczba} w ${liczbaProb} próbach.`);
+
+    </script>
+</body>
+</html>

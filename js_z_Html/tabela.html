@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 30px;
+        }
+
+        table, th, td {
+            border: 2px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        document.write("<table> <th> los </th><th> parzysta</th>");
+        
+        for(let i = 0; i < 5; i++){
+            let los = Math.floor((Math.random() * 10 ) + 1);
+            document.write("<tr>");
+                if((los % 2) == 0){
+                    document.write("<td>" + los + "</td>" +  "<td>"+ "tak" +  "</td>" + "<br>");
+                } else{
+                    document.write("<td>" + los + "</td>" + "<td>"+ "nie" + "</td>" + "<br>")
+                }
+            document.write("</tr>");
+
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>

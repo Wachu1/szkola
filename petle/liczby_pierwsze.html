@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liczby pierwsze</title>
+</head>
+<body>
+    <script>
+
+
+        let isPrime = true;
+        for(let a = 1; a < 20; a++){
+            isPrime = true;
+            for (let i = 2; i <= a - 1; i++) {
+                 if (a % i === 0) {
+                isPrime = false;
+                
+                }
+            }
+
+            if (isPrime) {
+            document.write(a + " <br>");
+             } 
+        }
+        
+    
+
+    </script>
+</body>
+</html>

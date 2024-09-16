@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        
+        let tab = [0,0,0,0];
+        let l = tab.length
+        for(let i = 0; i < l; i++){
+            tab[i] = Math.floor(Math.random() * 10) + 1; 
+        }
+        document.write(tab);
+        document.write("<br>");
+
+        let tab2 = [];
+        let l2 = tab2.length;
+        for(let i = 0; i < 10; i++){
+            tab2[tab2.length] = Math.floor(Math.random() * 10) + 1; 
+        }
+        document.write(tab2)
+    </script>
+</body>
+</html>
