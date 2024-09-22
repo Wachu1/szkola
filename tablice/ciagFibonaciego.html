@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciąg fibonaciego</title>
+</head>
+<body>
+    
+    <script>
+         let tab = [1,1];
+        
+        // for(let i = 0; i < 10; i++){
+        //     tab[tab.length] = tab[i] + tab[i + 1];
+        //     document.write(tab[i] + " ");
+        // }
+            
+            // for(let i = 2; i < 8; i++){
+            //     tab[i] = tab[i - 1] + tab[i - 1];
+            //     document.write(tab[i] + " ");
+            // }
+        
+        for(let i = 0; i < 8; i++){
+            tab[i + 2 ] = tab[i] + tab[i + 1];
+            document.write(tab[i] + " ");
+        }
+
+            
+    </script>
+</body>
+</html>

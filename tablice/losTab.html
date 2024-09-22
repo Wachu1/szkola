@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los</title>
+</head>
+<body>
+    <script>
+        let tab = [];
+        for(let i = 0; i < 10; i++){
+           
+           // let los = Math.floor((Math.random() * 10)+ 1 );
+            tab[tab.length] =  Math.floor((Math.random() * 10)+ 1 );
+           // document.write(tab[i] + " | ");
+
+        }
+        
+        for(let j = 0; j < tab.length; j++){
+            document.write( tab[j] + " | ");
+            
+            
+        }
+
+        let min = tab[0];
+        for(let k = 0; k < tab.length; k++){
+            if(tab[k] < min){
+                min = tab[k];
+
+            }
+        }
+
+        document.write("<br> min = " + min);
+        
+        let max = tab[0];
+        for(let l = 0; l < tab.length; l++){
+            if(tab[l] > max){
+                max = tab[l];
+            }
+        }
+        document.write("<br> max = " + max);
+
+        document.write("<br>")
+        for(let o = 2; o < 10; o++){
+            tab[o] = tab[o - 1] + tab[o - 1];
+
+            document.write(tab[o] + " ");
+        }
+    </script>
+</body>
+</html>

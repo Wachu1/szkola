@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabliczka mnożenia</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            text-align: center;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align: center;">Tabliczka mnożenia</h1>
+<table id="tabMno"></table>
+
+<script>
+    function tabMno() {
+        const table = document.getElementById('tabMno');
+        //let size = parseInt(prompt("Ile liczb ma tabelka?"));
+        let size = 10;
+
+        for (let i = 0; i <= size; i++) {
+            let row = "<tr>";
+            for (let j = 0; j <= size; j++) {
+                if (i === 0 && j === 0) {
+                   row += "<th></th>"; 
+                } else if (i === 0) {
+                    row += `<th>${j}</th>`;
+                } else if (j === 0) {
+                    row += `<th>${i}</th>`; 
+                } else {
+                    row += `<td>${i * j}</td>`; 
+                }
+            }
+            row += "</tr>";
+            table.innerHTML += row;
+        }
+    }
+
+    window.onload = tabMno();
+</script>
+
+</body>
+</html>
+

@@ -15,6 +15,13 @@
             border: 2px solid black;
             padding: 20px;
         }
+        .nie{
+            color: red;
+        }
+        .tak{
+            color: green;
+        }
+
     </style>
 </head>
 <body>
@@ -26,9 +33,9 @@
             let los = Math.floor((Math.random() * 10 ) + 1);
             document.write("<tr>");
                 if((los % 2) == 0){
-                    document.write("<td>" + los + "</td>" +  "<td>"+ "tak" +  "</td>" + "<br>");
+                    document.write("<td>" + los + "</td>" +  "<td class = 'tak'>"+ "tak" +  "</td>" + "<br>");
                 } else{
-                    document.write("<td>" + los + "</td>" + "<td>"+ "nie" + "</td>" + "<br>")
+                    document.write("<td>" + los + "</td>" + "<td class='nie'>"+ "nie" + "</td>" + "<br>")
                 }
             document.write("</tr>");
 
